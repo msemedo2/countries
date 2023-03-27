@@ -1,0 +1,54 @@
+//dark mode colors
+$dark-mode-elements: hsl(209, 23%, 22%);
+$dark-mode-background: hsl(207, 26%, 17%);
+$dark-mode-text: hsl(0, 0%, 100%);
+
+//light mode colors
+$light-mode-text: hsl(200, 15%, 8%);
+$light-mode-input: hsl(0, 0%, 52%);
+$light-mode-background: hsl(0, 0%, 98%);
+$light-mode-elements: hsl(0, 0%, 100%);
+
+//fonts sizes
+$homepage: 14px;
+$detail-page: 16px;
+
+//font weights
+$light: 300;
+$semi-bold: 600;
+$extra-bold: 800;
+
+//font family
+$font-family: 'Nunito Sans', sans-serif;
+
+//break points
+$mobile: 375px;
+$desktop: 1440px;
+
+//mixins
+//dark mode
+@mixin dark-mode {
+	background-color: $dark-mode-background;
+	color: $dark-mode-text;
+}
+
+//light mode
+@mixin light-mode {
+	background-color: $light-mode-background;
+	color: $light-mode-text;
+}
+
+//break points
+//mobile
+@mixin mobile {
+	@media (min-width: $mobile) {
+		@content;
+	}
+}
+
+//desktop
+@mixin desktop {
+	@media (min-width: $desktop) {
+		@content;
+	}
+}
