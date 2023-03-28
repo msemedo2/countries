@@ -1,7 +1,7 @@
 //dark mode colors
-$dark-mode-elements: hsl(209, 23%, 22%);
-$dark-mode-background: hsl(207, 26%, 17%);
 $dark-mode-text: hsl(0, 0%, 100%);
+$dark-mode-background: hsl(207, 26%, 17%);
+$dark-mode-elements: hsl(209, 23%, 22%);
 
 //light mode colors
 $light-mode-text: hsl(200, 15%, 8%);
@@ -10,20 +10,20 @@ $light-mode-background: hsl(0, 0%, 98%);
 $light-mode-elements: hsl(0, 0%, 100%);
 
 //fonts sizes
-$homepage: 14px;
-$detail-page: 16px;
+$fs-homepage: 14px;
+$fs-detail-page: 16px;
 
 //font weights
-$light: 300;
-$semi-bold: 600;
-$extra-bold: 800;
+$fw-light: 300;
+$fw-semi-bold: 600;
+$fw-extra-bold: 800;
 
 //font family
 $font-family: 'Nunito Sans', sans-serif;
 
 //break points
-$mobile: 375px;
-$desktop: 1440px;
+$bp-mobile: 375px;
+$bp-desktop: 1440px;
 
 //mixins
 //dark mode
@@ -40,15 +40,15 @@ $desktop: 1440px;
 
 //break points
 //mobile
-@mixin mobile {
-	@media (min-width: $mobile) {
+@mixin bp-mobile {
+	@media (min-width: $bp-mobile) {
 		@content;
 	}
 }
 
 //desktop
-@mixin desktop {
-	@media (min-width: $desktop) {
+@mixin bp-desktop {
+	@media (min-width: $bp-desktop) {
 		@content;
 	}
 }
