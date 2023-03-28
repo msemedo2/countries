@@ -1,6 +1,8 @@
 import { useAppDispatch, useAppSelector } from '../../app/store';
 import { changeTheme } from '../../app/features/themeSlice';
 
+import './Navbar.styles.scss';
+
 interface NavbarProps {
 	mode: string;
 }
