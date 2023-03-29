@@ -40,6 +40,7 @@ textarea {
 	@include light-mode;
 	height: 100vh;
 	.app-container {
+		margin: 0 auto;
 		max-width: $bp-desktop;
 	}
 }
@@ -48,5 +49,51 @@ textarea {
 	@include dark-mode;
 	.navbar-container {
 		background-color: $dark-mode-elements;
+	}
+	.country {
+		background-color: $dark-mode-elements;
+	}
+}
+
+.countries-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 40px 0;
+	gap: 50px;
+	@include bp-desktop {
+		justify-content: space-between;
+	}
+	.country {
+		border-radius: 5px;
+		background-color: $light-mode-elements;
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.422);
+		.image-container {
+			height: 180px;
+			width: 270px;
+			.flag {
+				border-radius: 5px 5px 0 0;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.country-info-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 20px;
+			.country-name {
+				margin-bottom: 15px;
+			}
+			.info-container {
+				display: flex;
+				flex-direction: row;
+				.title {
+					font-weight: $fw-extra-bold;
+				}
+			}
+		}
 	}
 }

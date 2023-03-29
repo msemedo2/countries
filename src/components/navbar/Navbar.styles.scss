@@ -5,6 +5,7 @@
 	width: 100%;
 	background-color: $light-mode-elements;
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.248);
+	left: 0;
 	.navbar {
 		max-width: $bp-desktop;
 		margin: 0 auto;
@@ -12,9 +13,12 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 20px 40px 20px;
-		cursor: pointer;
-		.fa-moon {
-			margin-right: 10px;
+		.theme-container {
+			user-select: none;
+			cursor: pointer;
+			.fa-moon {
+				margin-right: 10px;
+			}
 		}
 	}
 }
