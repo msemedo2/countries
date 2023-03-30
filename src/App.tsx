@@ -1,21 +1,17 @@
-import { useState, useEffect } from 'react';
-import { useAppSelector } from './app/store';
+import { useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from './app/store';
+import { fetchCountries } from './app/features/countriesSlice';
 import Navbar from './components/navbar/Navbar.component';
 import Countries, { Country } from './components/countries/Countries.component';
 import './App.scss';
 
 const App = () => {
-	const [countries, setCountries] = useState([]);
+	const dispatch = useAppDispatch();
+	const countries = useAppSelector((state) => state.countries.countries);
 	const { mode } = useAppSelector((state) => state.theme);
 
-	const fetchCountries = async () => {
-		const response = await fetch('https://restcountries.com/v3.1/all');
-		const data = await response.json();
-		setCountries(data);
-	};
-
 	useEffect(() => {
-		fetchCountries();
+		dispatch(fetchCountries());
 	}, []);
 
 	return (

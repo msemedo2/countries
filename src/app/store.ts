@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import ThemeSlice from './features/themeSlice';
+import CountriesSlice from './features/countriesSlice';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 
 export const store = configureStore({
 	reducer: {
 		theme: ThemeSlice,
+		countries: CountriesSlice,
 	},
 });
 
